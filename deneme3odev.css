@@ -1,0 +1,148 @@
+
+  
+  body{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.5;   /* metin satır yüksekliği*/
+  }
+  
+ 
+  h1{
+    margin: 0 0 3rem;  /* sol sağ alt kenar için boşluk */
+    font-size: 2.5rem;
+    margin-bottom: .200rem; /* Alt kenara boşluk bırakır. */
+    color: rgba(0, 0, 0, 0.659);
+    
+
+    
+
+  }
+  
+  h2{
+    margin: 0 0 1rem; /* sol sağ ve alt kısımları boşluk bırakı*/
+    letter-spacing: 1px;  /* harfler arasındaki boşluk 1 piksel olarak belirtir.*/
+    text-transform: uppercase; /* tüm hepsi büyük har olur */
+  }
+  
+span{
+    color: #4473c4db;
+  }
+  
+  
+  .cv-container{
+    display:grid;   /* dizi dikey ve yatay çizgiyi içeren yapıdır. iki boyutludur.*/
+    grid-template-columns: 1fr 1fr 1fr; /* fr biriminden 3 sütün anlmaına geliyor.*/
+    grid-template-areas: "left-column right-column right-column";   /*sol sütün sağ sütün içerik var*/
+    width: 1200px;
+    margin: 100px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  /* gölgelendirmek için arka plan */
+  }
+  
+  .bolum{
+    margin-bottom: 1.5rem;  /* Alt kenara boşluk bırakır. */
+  }
+  
+  .left-column{
+    grid-area: left-column; /* alanı konumlandırmak için kullanılır grid*/
+    padding: 50px;
+    background-color:rgba(232, 162, 212, 0.423);
+    color: white;
+  }
+  
+  .ranafoto{
+    border-radius: 50%;
+    max-width: 150px;
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+  }
+  
+  .beceriler{
+    padding: 0;
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+  }
+  
+  
+  .right-column{
+    grid-area: right-column; /* alanı konumlandırmak için kullanılır grid*/
+    display: grid;
+    grid-template-rows: 250px 1fr; /*ız gara içindeki satırların boyutlarını belirtir.*/
+    grid-template-areas:  /*ızgara içindeki alanların adlarını belirtir.*/
+      "header"
+      "content";
+  }
+  
+  .header{
+    grid-area: header;  /* alanı konumlandırmak için kullanılır grid*/
+    padding: 50px;
+    background-color: #f2f2f296;
+    display: flex;
+    flex-direction: column; /*öğe yukarıdan aşağı dizilir.*/
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.631);
+  }
+
+
+  .content{
+    grid-area: content;
+    padding: 50px;  /*kenar ve kutu arasındaki bosluk */
+  }
+  
+  .ranafoto:hover {
+    transform: scale(1.1); /* Fotoğrafı 1.1 kat büyütür */
+    transition: transform 0.3s ease; /* Dönüşümü 0.3 saniyede yumuşak bir şekilde yapar */
+}
+
+nav{
+    height:auto;
+    color: rgba(255, 192, 203, 0.849) ;
+    text-align: center;
+    padding: 1rem;   /* hücre içi boşluk */  
+ }
+    
+a{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;   /* yazı tipini kalınlastırdı */
+    color: rgb(255, 192, 203);
+    padding: 5px 15px;
+    border-radius: 50px;  /* kenarların yuvarlanması için */
+    background-color:#4473c4a3;
+    text-decoration: none;  /* metindeki biçimi kaldırır.*/
+
+}
+ 
+footer{
+  height: 50px;
+  background-color:rgba(205, 111, 159, 0);
+  color:rgb(149, 139, 139) ;
+  text-align: center;
+  border-top: solid 1px rgb(149, 139, 139);
+
+}
+
+/* Karanlık Mod Stilleri */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+ 
+header.dark-mode, section.dark-mode, footer.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+ 
+button.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+ 
+button.dark-mode:hover {
+    background-color: #444;
+}
+ 
+nav button.dark-mode {
+    border-color: #ffffff;
+}
